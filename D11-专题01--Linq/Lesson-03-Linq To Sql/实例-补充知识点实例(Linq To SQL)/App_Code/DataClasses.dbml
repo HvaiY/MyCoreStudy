@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Lesson" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=harry;Initial Catalog=Lesson;Persist Security Info=True;User ID=sa" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="LessonConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.JB_khxx" Member="JB_khxx">
+    <Type Name="JB_khxx">
+      <Column Name="id" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="mingcheng" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="dianhua" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="chuanzhen" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="dizhi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sfid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+    <InsertFunction FunctionId="FunctionId1">
+      <Argument Parameter="id" Member="id" />
+      <Argument Parameter="mingcheng" Member="mingcheng" />
+      <Argument Parameter="dianhua" Member="dianhua" />
+      <Argument Parameter="chuanzhen" Member="chuanzhen" />
+      <Argument Parameter="dizhi" Member="dizhi" />
+    </InsertFunction>
+  </Table>
+  <Table Name="dbo.JB_gysxx" Member="JB_gysxx">
+    <Type Name="JB_gysxx">
+      <Column Name="id" Type="System.String" DbType="VarChar(6) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="danwei" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="lianxiren" Type="System.String" DbType="VarChar(16)" CanBeNull="true" />
+      <Column Name="lianxidianhua" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="chuanzhen" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.JB_SF" Member="JB_SF">
+    <Type Name="JB_SF">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="mingcheng" Type="System.String" DbType="VarChar(20)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.GetAllData" Method="GetAllData">
+    <ElementType Name="GetAllDataResult">
+      <Column Name="id" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dianhua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="chuanzhen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_JB_khxx1_GetList" Method="sp_JB_khxx1_GetList">
+    <Parameter Name="id" Type="System.String" DbType="VarChar(10)" />
+    <Parameter Name="name" Type="System.String" DbType="VarChar(50)" />
+    <ElementType Name="sp_JB_khxx1_GetListResult">
+      <Column Name="id" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dianhua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="chuanzhen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.sp_MultiResultSet" Method="sp_MultiResultSet">
+    <ElementType Name="sp_MultiResultSetResult">
+      <Column Name="id" Type="System.String" DbType="VarChar(10) NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="dianhua" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="chuanzhen" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Id="FunctionId1" Name="dbo.UP_JB_khxx_ADD" Method="UP_JB_khxx_ADD">
+    <Parameter Name="id" Type="System.String" DbType="VarChar(6)" />
+    <Parameter Name="mingcheng" Type="System.String" DbType="VarChar(20)" />
+    <Parameter Name="dianhua" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="chuanzhen" Type="System.String" DbType="VarChar(15)" />
+    <Parameter Name="dizhi" Type="System.String" DbType="VarChar(50)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UP_JB_khxx_Delete" Method="UP_JB_khxx_Delete">
+    <Parameter Name="id" Type="System.String" DbType="VarChar(6)" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.UP_JB_khxx_GetList" Method="UP_JB_khxx_GetList">
+    <ElementType Name="UP_JB_khxx_GetListResult">
+      <Column Name="id" Type="System.String" DbType="VarChar(6) NOT NULL" CanBeNull="false" />
+      <Column Name="mingcheng" Type="System.String" DbType="VarChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="dianhua" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="chuanzhen" Type="System.String" DbType="VarChar(15)" CanBeNull="true" />
+      <Column Name="dizhi" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Column Name="sfid" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+</Database>

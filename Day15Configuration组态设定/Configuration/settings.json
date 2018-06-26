@@ -1,0 +1,14 @@
+﻿{
+  "CustomObject": {
+    "Property": {
+      "SubProperty1": 1,
+      "SubProperty2": true,
+      "SubProperty3": "This is sub property."
+    }
+  },
+  "SupportedCultures": [
+    "en-GB",
+    "zh-TW",
+    "zh-CN"
+  ]
+}

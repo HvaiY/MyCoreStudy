@@ -1,0 +1,3 @@
+﻿{
+  "DBConnectionString": "Data Source=192.168.1.5;Initial Catalog=MyWebsite;Persist Security Info=True;User ID=xxx;Password=xxx"
+}

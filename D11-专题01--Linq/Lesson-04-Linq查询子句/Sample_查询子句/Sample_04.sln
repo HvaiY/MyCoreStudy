@@ -1,0 +1,35 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "Sample_查询子句", ".", "{22BE4506-EB50-40B7-B0CC-D7AD7AAA563A}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/Sample_04"
+		Debug.AspNetCompiler.PhysicalPath = "..\..\..\..\桌面\实例-精通Linq数据访问技术C#\ch04\Sample_04\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\Sample_04\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/Sample_04"
+		Release.AspNetCompiler.PhysicalPath = "..\..\..\..\桌面\实例-精通Linq数据访问技术C#\ch04\Sample_04\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\Sample_04\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "2453"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|.NET = Debug|.NET
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{22BE4506-EB50-40B7-B0CC-D7AD7AAA563A}.Debug|.NET.ActiveCfg = Debug|.NET
+		{22BE4506-EB50-40B7-B0CC-D7AD7AAA563A}.Debug|.NET.Build.0 = Debug|.NET
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

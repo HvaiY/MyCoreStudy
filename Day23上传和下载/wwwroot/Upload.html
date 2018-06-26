@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+</head>
+<body>
+    <h2>Upload</h2>
+
+    <form method="post" enctype="multipart/form-data" action="/api/file">
+        <input type="file" name="files" multiple accept="image/*" />
+        <br />
+        <input type="submit" value="Upload" />
+    </form>
+
+    <h2>Album 文件和表单一起提交</h2>
+
+    <form method="post" enctype="multipart/form-data" action="/api/file/album">
+        名稱：<input type="text" name="title" /><br />
+        日期：<input type="date" name="date" /><br />
+        相片：<input type="file" name="photos" multiple accept="image/*" /><br />
+        <input type="submit" value="送出" />
+    </form>
+    
+<h2>Album 大文件和表单一起提交</h2>
+
+<form method="post" enctype="multipart/form-data" action="/api/file/bigalbum">
+    名稱：<input type="text" name="title" /><br />
+    日期：<input type="date" name="date" /><br />
+    相片：<input type="file" name="photos" multiple accept="image/*" /><br />
+    <input type="submit" value="送出" />
+</form>
+</body>
+</html>
